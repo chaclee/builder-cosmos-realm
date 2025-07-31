@@ -314,7 +314,7 @@ export default function Index() {
             </h1>
           </div>
           <p className="text-slate-600 text-lg max-w-2xl mx-auto">
-            专业的颜色选择工具，支持多种颜色格式，提供系统级取色功能
+            专业的颜色选择工具，支持多种颜色��式，提供系统级取色功能
           </p>
         </div>
 
@@ -427,7 +427,19 @@ export default function Index() {
             {/* Color History */}
             <Card className="mt-6">
               <CardHeader>
-                <CardTitle className="text-sm">颜色历史</CardTitle>
+                <div className="flex items-center justify-between">
+                  <CardTitle className="text-sm">颜色历史</CardTitle>
+                  {colorHistory.length > 0 && (
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={clearHistory}
+                      className="h-6 w-6 p-0 text-slate-500 hover:text-slate-700"
+                    >
+                      <Trash2 className="w-3 h-3" />
+                    </Button>
+                  )}
+                </div>
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-5 gap-2">
