@@ -54,6 +54,10 @@
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --picker-primary: 217 91% 60%;
+    --picker-secondary: 210 40% 96%;
+    --picker-accent: 224 76% 48%;
   }
 
   .dark {
