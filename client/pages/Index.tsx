@@ -255,6 +255,14 @@ export default function Index() {
     });
   };
 
+  const clearHistory = () => {
+    setColorHistory([]);
+    toast({
+      title: "已清空",
+      description: "颜色历史已清空",
+    });
+  };
+
   const handleHexChange = (value: string) => {
     if (/^#[0-9A-F]{6}$/i.test(value)) {
       const rgb = hexToRgb(value);
