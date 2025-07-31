@@ -12,7 +12,7 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Slider } from "@/components/ui/slider";
 import { Badge } from "@/components/ui/badge";
-import { Copy, Palette, Pipette, Eye, Sparkles } from "lucide-react";
+import { Copy, Palette, Pipette, Eye, Sparkles, Trash2 } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 
 interface ColorState {
