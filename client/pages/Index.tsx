@@ -314,7 +314,7 @@ export default function Index() {
             </h1>
           </div>
           <p className="text-slate-600 text-lg max-w-2xl mx-auto">
-            专业的颜色选择工具，支持多种颜色��式，提供系统级取色功能
+            专业的颜色选择工具，支持多种颜色格式，提供系统级取色功能
           </p>
         </div>
 
@@ -442,20 +442,26 @@ export default function Index() {
                 </div>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-5 gap-2">
-                  {colorHistory.map((color, index) => (
-                    <div
-                      key={index}
-                      className="aspect-square rounded cursor-pointer border-2 border-white shadow hover:scale-110 transition-transform"
-                      style={{ backgroundColor: color }}
-                      onClick={() => {
-                        const rgb = hexToRgb(color);
-                        updateColor(rgb);
-                      }}
-                      title={color}
-                    />
-                  ))}
-                </div>
+                {colorHistory.length > 0 ? (
+                  <div className="grid grid-cols-5 gap-2">
+                    {colorHistory.map((color, index) => (
+                      <div
+                        key={index}
+                        className="aspect-square rounded cursor-pointer border-2 border-white shadow hover:scale-110 transition-transform"
+                        style={{ backgroundColor: color }}
+                        onClick={() => {
+                          const rgb = hexToRgb(color);
+                          updateColor(rgb);
+                        }}
+                        title={color}
+                      />
+                    ))}
+                  </div>
+                ) : (
+                  <div className="text-center py-4 text-sm text-slate-500">
+                    暂无颜色历史
+                  </div>
+                )}
               </CardContent>
             </Card>
           </div>
